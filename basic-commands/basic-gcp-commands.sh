@@ -13,6 +13,18 @@ gcloud config set compute/region us-central1
 #confirm nginx installation
 ps auwx | grep nginx
 
+#create VM Instance with Cloud Shell
+gcloud compute instances create [instance-name]-machine-type n1-standard-2 --zone us-central1-c
+
+#establish an ssh connection to GCP VM Instance
+gcloud compute ssh gcelab2 --zone us-central1-c
+
+#create an environment variable to store your project Id
+export PROJECT_ID=<your_project_ID>
+
+#create an environment variable to store your zone
+export ZONE=<your_zone>
+
 #add source code to deploy nginx servers (load-balancer)
 cat << EOF > startup.sh
 #! /bin/bash
