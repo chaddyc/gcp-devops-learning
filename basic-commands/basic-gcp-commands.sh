@@ -16,6 +16,9 @@ ps auwx | grep nginx
 #create VM Instance with Cloud Shell
 gcloud compute instances create [instance-name]-machine-type n1-standard-2 --zone us-central1-c
 
+#create Vm Instance with Cloud Shell with zone variable(set zone variable)
+gcloud compute instances create gcelab2 --machine-type n1-standard-2 --zone $ZONE
+
 #establish an ssh connection to GCP VM Instance
 gcloud compute ssh gcelab2 --zone us-central1-c
 
@@ -24,6 +27,9 @@ export PROJECT_ID=<your_project_ID>
 
 #create an environment variable to store your zone
 export ZONE=<your_zone>
+
+#install GCP SDK
+sudo apt-get install google-cloud-sdk
 
 #add source code to deploy nginx servers (load-balancer)
 cat << EOF > startup.sh
