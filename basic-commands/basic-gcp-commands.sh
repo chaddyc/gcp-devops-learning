@@ -10,6 +10,9 @@ gcloud config set compute/zone us-east1-b
 #set default compute region
 gcloud config set compute/region us-central1
 
+#confirm nginx installation
+ps auwx | grep nginx
+
 #add source code to deploy nginx servers (load-balancer)
 cat << EOF > startup.sh
 #! /bin/bash
