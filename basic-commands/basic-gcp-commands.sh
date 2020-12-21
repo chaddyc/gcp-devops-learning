@@ -7,6 +7,9 @@ gcloud config list project
 #set default compute zone
 gcloud config set compute/zone us-east1-b
 
+#set default compute region
+gcloud config set compute/region us-central1
+
 #add source code to deploy nginx servers (load-balancer)
 cat << EOF > startup.sh
 #! /bin/bash
