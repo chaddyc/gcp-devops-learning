@@ -34,6 +34,9 @@ sudo apt-get install google-cloud-sdk
 #describe vm (list vm details)
 gcloud compute instances describe <your_vm>
 
+#ssh connection to gcloud vm instance
+gcloud compute ssh gcelab2 --zone us-central1-c
+
 #add source code to deploy nginx servers (load-balancer)
 cat << EOF > startup.sh
 #! /bin/bash
