@@ -90,3 +90,4 @@ docker push gcr.io/[project-id]/node-app:0.2
 #stop and remove all docker containers
 docker stop $(docker ps -q)
 docker rm $(docker ps -aq)
+
