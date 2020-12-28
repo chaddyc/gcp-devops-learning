@@ -83,3 +83,10 @@ docker inspect [container_id]
 
 #use --format to inspect specific fields from the returned JSON
 docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' [container_id]
+
+#push docker image to gcr - fill in project id
+docker push gcr.io/[project-id]/node-app:0.2
+
+#stop and remove all docker containers
+docker stop $(docker ps -q)
+docker rm $(docker ps -aq)
