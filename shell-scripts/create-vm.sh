@@ -1,1 +1,1 @@
-gcloud compute instances create gcelab2 --machine-type n1-standard-2 --zone us-central1-c
+gcloud compute instances create nucleus-jumphost --machine-type f1-micro  --zone us-central1-c
