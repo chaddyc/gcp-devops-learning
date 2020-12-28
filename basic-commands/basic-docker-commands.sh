@@ -62,3 +62,18 @@ docker run -p 4000:80 --name my-app node-app:0.1
 
 #test your docker app
 curl http://localhost:4000
+
+#stop and remove container app
+docker stop my-app && docker rm my-app
+
+#start container app in the background
+docker run -p 4000:80 --name my-app -d node-app:0.1
+
+#check docker container logs
+docker logs [container_id]
+
+#run another container with new image version
+docker run -p 8080:80 --name my-app-2 -d node-app:0.2
+
+#follow the log's output as the container is running
+docker logs -f [container_id]
