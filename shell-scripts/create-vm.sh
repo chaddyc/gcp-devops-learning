@@ -1,1 +1,0 @@
-gcloud compute instances create nucleus-jumphost --machine-type f1-micro  --zone us-central1-c
