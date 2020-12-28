@@ -77,3 +77,9 @@ docker run -p 8080:80 --name my-app-2 -d node-app:0.2
 
 #follow the log's output as the container is running
 docker logs -f [container_id]
+
+#examine a container's metadata in Docker with inspect
+docker inspect [container_id]
+
+#use --format to inspect specific fields from the returned JSON
+docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' [container_id]
