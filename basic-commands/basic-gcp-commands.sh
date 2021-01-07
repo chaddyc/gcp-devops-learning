@@ -10,6 +10,9 @@ gcloud config set compute/zone us-east1-b
 #set default compute region
 gcloud config set compute/region us-central1
 
+#list vm instances
+gcloud compute instances list
+
 #confirm nginx installation
 ps auwx | grep nginx
 
